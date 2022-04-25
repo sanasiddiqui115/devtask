@@ -19,5 +19,9 @@ public class ChallengeService {
 	    return challengeRepository.findAll();
 	}
 
+	//CREATE
+	public Data createData(Data data) {
+	    return challengeRepository.save(data);
+	}
 }
 
