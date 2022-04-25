@@ -1,5 +1,7 @@
 package com.challenge.model;
 
+import java.util.Optional;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +17,9 @@ public class Data {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	private String id;
-
+	
+	private String endpoint;
+	
 	public String getId() {
 		return id;
 	}
@@ -23,5 +27,13 @@ public class Data {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
+
+	public Optional<String> getEndpoint() {
+		return Optional.ofNullable(endpoint);
+	}
+
+	public void setEndpoint(String endpoint) {
+		this.endpoint = endpoint;
+	}
+
 }
